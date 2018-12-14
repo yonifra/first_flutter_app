@@ -7,18 +7,23 @@ class Home extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       verticalDirection: VerticalDirection.down,
       children: <Widget>[
-        Text(sayHello(), style: TextStyle(
-          fontSize: 24.0,
-          fontFamily: 'Manrope'
-        ),),
-        MaterialButton(child: Text("בניין 47")),
-        RaisedButton(
-          child: Text("בניין 48"),
+        Text(
+          sayHello(),
+          style: TextStyle(
+              fontSize: 16.0,
+              fontFamily: 'Manrope',
+              fontWeight: FontWeight.normal),
         ),
-        IconButton(icon: Text("בניין 49")),
-        MaterialButton(child: Text("בניין 47")),
-        MaterialButton(child: Text("בניין 47")),
-        MaterialButton(child: Text("בניין 47")),
+        Text("Heya, this is the old font"),
+        MaterialButton(child: Text("בניין 47"), onPressed: () => {}),
+        RaisedButton(child: Text("בניין 48"), onPressed: () => {}),
+        IconButton(
+          icon: Text("בניין 49"),
+          onPressed: () => {},
+        ),
+        MaterialButton(child: Text("בניין 47"), onPressed: () => {}),
+        MaterialButton(child: Text("בניין 47"), onPressed: () => {}),
+        MaterialButton(child: Text("בניין 47"), onPressed: () => {}),
       ],
     );
   }
@@ -37,7 +42,8 @@ class Home extends StatelessWidget {
       hello = "Good evening";
     }
 
-    String minutes = (minute < 10) ? "0" + minute.toString() : minute.toString();
+    String minutes =
+        (minute < 10) ? "0" + minute.toString() : minute.toString();
 
     return "It's now " + hour.toString() + ":" + minutes + "\n" + hello;
   }
