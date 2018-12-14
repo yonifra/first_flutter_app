@@ -9,21 +9,16 @@ class Home extends StatelessWidget {
       children: <Widget>[
         Text(
           sayHello(),
+          style: TextStyle(fontSize: 16.0),
+        ),
+        Text(
+          sayHello(),
           style: TextStyle(
-              fontSize: 16.0,
-              fontFamily: 'Manrope',
-              fontWeight: FontWeight.normal),
+            fontSize: 16.0,
+          ),
         ),
-        Text("Heya, this is the old font"),
-        MaterialButton(child: Text("בניין 47"), onPressed: () => {}),
-        RaisedButton(child: Text("בניין 48"), onPressed: () => {}),
-        IconButton(
-          icon: Text("בניין 49"),
-          onPressed: () => {},
-        ),
-        MaterialButton(child: Text("בניין 47"), onPressed: () => {}),
-        MaterialButton(child: Text("בניין 47"), onPressed: () => {}),
-        MaterialButton(child: Text("בניין 47"), onPressed: () => {}),
+        MaterialButton(child: Text("Building 47"), onPressed: () => {}),
+        RaisedButton(child: Text("Building 48"), onPressed: () => {}),
       ],
     );
   }

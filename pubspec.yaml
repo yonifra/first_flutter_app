@@ -56,11 +56,11 @@ flutter:
 fonts:
   - family: Manrope
     fonts:
-      - asset: ./fonts/manrope-regular.ttf
-      - asset: ./fonts/manrope-bold.ttf
+      - asset: fonts/manrope-regular.ttf
+      - asset: fonts/manrope-bold.ttf
         weight: 700
-      - asset: ./fonts/manrope-light.ttf
+      - asset: fonts/manrope-light.ttf
         weight: 300
-  #
+        
   # For details regarding fonts from package dependencies,
   # see https://flutter.io/custom-fonts/#from-packages

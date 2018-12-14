@@ -7,11 +7,12 @@ class HelloFlutterApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(fontFamily: 'Manrope'),
       debugShowCheckedModeBanner: false,
       title: 'Hello Flutter App',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('היתרים פרוייקט 225'),
+          title: Text('My cool Flutter app'),
         ),
         body: Home()
       ),
