@@ -61,6 +61,6 @@ fonts:
         weight: 700
       - asset: fonts/manrope-light.ttf
         weight: 300
-        
+
   # For details regarding fonts from package dependencies,
   # see https://flutter.io/custom-fonts/#from-packages

@@ -1,3 +1,5 @@
+import 'package:first_flutter_app/widgets/helloyou.dart';
+import 'package:first_flutter_app/widgets/mydropdown.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -6,19 +8,14 @@ class Home extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       verticalDirection: VerticalDirection.down,
+      textDirection: TextDirection.ltr,
       children: <Widget>[
         Text(
           sayHello(),
           style: TextStyle(fontSize: 16.0),
         ),
-        Text(
-          sayHello(),
-          style: TextStyle(
-            fontSize: 16.0,
-          ),
-        ),
-        MaterialButton(child: Text("Building 47"), onPressed: () => {}),
-        RaisedButton(child: Text("Building 48"), onPressed: () => {}),
+        HelloYou(),
+        MyDropdown(),
       ],
     );
   }
