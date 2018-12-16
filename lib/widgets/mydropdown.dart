@@ -1,16 +1,30 @@
 import 'package:flutter/material.dart';
 
-class MyDropdown extends StatelessWidget {
+class MyDropdown extends StatefulWidget {
+  @override
+  State<MyDropdown> createState() => DropdownState();
+}
+
+class DropdownState extends State<MyDropdown> {
+  final _currencies = ['Dollars', 'Euro', 'Pounds'];
+  String _selectedCurrency = 'Dollars';
+
   @override
   Widget build(BuildContext context) {
     return DropdownButton<String>(
-      items: <String>['Dollars', 'Euro', 'Pounds'].map((String value) {
+      items: _currencies.map((String value) {
         return DropdownMenuItem<String>(
           value: value,
           child: Text(value),
+          key: Key(value),
         );
       }).toList(),
-      onChanged: (_){},
+      onChanged: (String c){
+        setState(() {
+          _selectedCurrency = c;
+        });
+      },
+      value: _selectedCurrency,
     );
   }
 }
