@@ -11,40 +11,59 @@ class HelloFlutterApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Hello Flutter App',
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('My cool Flutter app'),
-        ),
-        drawer: Drawer(
-          child: ListView(
-            // Important: Remove any padding from the ListView.
-            padding: EdgeInsets.zero,
-            children: <Widget>[
-              DrawerHeader(
-                child: Text('Drawer Header'),
-                decoration: BoxDecoration(
-                  color: Colors.blue,
-                ),
-              ),
-              ListTile(
-                title: Text('Item 1'),
-                onTap: () {
-                  // Update the state of the app
-                  // ...
-                  Navigator.pop(context);
-                },
-              ),
-              ListTile(
-                title: Text('Item 2'),
-                onTap: () {
-                  // Update the state of the app
-                  // ...
-                },
-              ),
-            ],
+          appBar: AppBar(
+            title: Text('My cool funky app'),
           ),
-        ),
-        body: Home()
-      ),
+          drawer: Drawer(
+            child: ListView(
+              // Important: Remove any padding from the ListView.
+              padding: EdgeInsets.zero,
+              children: <Widget>[
+                DrawerHeader(
+                  child: Text(
+                    'James Dean',
+                    style:
+                        TextStyle(fontSize: 30.0, fontWeight: FontWeight.w600),
+                    textAlign: TextAlign.center,
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.blue,
+                  ),
+                ),
+                ListTile(
+                  title: Row(
+                    children: [Icon(Icons.clear), Text("First Item")],
+                  ),
+                  onTap: () {
+                    // Update the state of the app
+                    // ...
+                    Navigator.pop(context);
+                  },
+                ),
+                ListTile(
+                  title: Row(
+                    children: [Icon(Icons.access_alarm), Text("Second Item")],
+                  ),
+                  onTap: () {
+                    // Update the state of the app
+                    // ...
+                    Navigator.pop(context);
+                  },
+                ),
+                ListTile(
+                  title: Row(
+                    children: [Icon(Icons.add_alert), Text("Third Item")],
+                  ),
+                  onTap: () {
+                    // Update the state of the app
+                    // ...
+                    Navigator.pop(context);
+                  },
+                ),
+              ],
+            ),
+          ),
+          body: Home()),
     );
   }
 }
