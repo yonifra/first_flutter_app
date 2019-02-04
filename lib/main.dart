@@ -4,6 +4,8 @@ import './screens/home.dart';
 void main() => runApp(HelloFlutterApp());
 
 class HelloFlutterApp extends StatelessWidget {
+  var leftPad = 45.0;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,11 +22,18 @@ class HelloFlutterApp extends StatelessWidget {
               padding: EdgeInsets.zero,
               children: <Widget>[
                 DrawerHeader(
-                  child: Text(
-                    'James Dean',
-                    style:
-                        TextStyle(fontSize: 30.0, fontWeight: FontWeight.w600),
-                    textAlign: TextAlign.center,
+                  child: Row(
+                    children: [
+                      Icon(Icons.airplay),
+                      Text(
+                        'Yoni Fraimorice',
+                        style: TextStyle(
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.white),
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
                   ),
                   decoration: BoxDecoration(
                     color: Colors.blue,
@@ -32,7 +41,13 @@ class HelloFlutterApp extends StatelessWidget {
                 ),
                 ListTile(
                   title: Row(
-                    children: [Icon(Icons.clear), Text("First Item")],
+                    children: [
+                      Icon(Icons.clear),
+                      Padding(
+                        child: Text("First Item"),
+                        padding: EdgeInsets.only(left: leftPad),
+                      ),
+                    ],
                   ),
                   onTap: () {
                     // Update the state of the app
@@ -42,7 +57,13 @@ class HelloFlutterApp extends StatelessWidget {
                 ),
                 ListTile(
                   title: Row(
-                    children: [Icon(Icons.access_alarm), Text("Second Item")],
+                    children: [
+                      Icon(Icons.access_alarm),
+                      Padding(
+                        child: Text("Second Item"),
+                        padding: EdgeInsets.only(left: leftPad),
+                      ),
+                    ],
                   ),
                   onTap: () {
                     // Update the state of the app
@@ -52,7 +73,13 @@ class HelloFlutterApp extends StatelessWidget {
                 ),
                 ListTile(
                   title: Row(
-                    children: [Icon(Icons.add_alert), Text("Third Item")],
+                    children: [
+                      Icon(Icons.add_alert),
+                      Padding(
+                        child: Text("Third Item"),
+                        padding: EdgeInsets.only(left: leftPad),
+                      )
+                    ],
                   ),
                   onTap: () {
                     // Update the state of the app
